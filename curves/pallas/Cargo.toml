@@ -1,0 +1,35 @@
+[package]
+name = "ark-pallas-ext"
+description = "Extensions for the Pallas elliptic curve famously which forms the curve cycle with Vesta"
+version.workspace = true
+authors.workspace = true
+repository.workspace = true
+keywords.workspace = true
+categories.workspace = true
+include.workspace = true
+license.workspace = true
+edition.workspace = true
+
+[dependencies]
+ark-ec.workspace = true
+ark-ff.workspace = true
+ark-std.workspace = true
+ark-pallas.workspace = true
+ark-models-ext.workspace = true
+ark-serialize.workspace = true
+
+[dev-dependencies]
+ark-algebra-test-templates.workspace = true
+test-utils.workspace = true
+
+[features]
+default = [ "std" ]
+std = [
+  "ark-pallas/std",
+  "ark-ec/std",
+  "ark-ff/std",
+  "ark-models-ext/std",
+  "ark-serialize/std",
+  "ark-std/std",
+]
+parallel = [ "ark-ec/parallel", "ark-ff/parallel", "ark-std/parallel" ]

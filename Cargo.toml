@@ -6,7 +6,7 @@ members = [
   "curves/ed_on_bls12_377",
   "curves/ed_on_bls12_381_bandersnatch",
   "models",
-  "test-utils",
+  "test-utils", "curves/pallas", "curves/vesta", "curves/secp256k1",
 ]
 resolver = "2"
 
@@ -29,6 +29,9 @@ ark-ec = { version = "0.5", default-features = false }
 ark-ff = { version = "0.5", default-features = false }
 ark-std = { version = "0.5", default-features = false }
 ark-serialize = { version = "0.5", default-features = false }
+ark-pallas = { version = "0.5.0", default-features = false , features = ["curve"]}
+ark-vesta = { version = "0.5.0", default-features = false }
+ark-secp256k1 = { version = "0.5.0", default-features = false }
 ark-bls12-377 = { version = "0.5", default-features = false, features = ["curve"] }
 ark-bls12-381 = { version = "0.5", default-features = false, features = ["curve"] }
 ark-bw6-761 = { version = "0.5", default-features = false }
